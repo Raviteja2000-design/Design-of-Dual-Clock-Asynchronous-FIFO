@@ -1,12 +1,5 @@
-//-------------DESCRIPTION---------------------------
-// This is a FIFO write pointer Handle module with full flag.
-//--------------------------------------------------
 
-//-------------PARAMETERS---------------------------
-// ADDR_SIZE: Size of the address bus
-//--------------------------------------------------
-
-module wptr_full #(parameter ADDR_SIZE = 4)(
+module wptr_full #(parameter ADDR_SIZE = 8)(
     output reg wfull,                   // Full flag
     output [ADDR_SIZE-1:0] waddr,       // Write address
     output reg [ADDR_SIZE :0] wptr,     // Write pointer
@@ -47,12 +40,3 @@ module wptr_full #(parameter ADDR_SIZE = 4)(
     end
 endmodule
 
-// ---------------------------EXPLANATION---------------------------------
-// The module implements a write pointer for a FIFO with a full flag.
-// The write pointer is implemented in gray code to avoid glitches when
-// transitioning between clock domains. The write pointer is incremented based
-// on the write increment signal and the full flag. The full flag is set
-// when the write pointer is equal to the read pointer, indicating that
-// the FIFO is full. The write pointer and full flag are updated on each
-// clock cycle, and the write address is calculated from the write pointer.
-// -----------------------------------------------------------------------
