@@ -1,6 +1,6 @@
 
 
-module rptr_empty #(parameter ADDR_SIZE = 4)(
+module rptr_empty #(parameter ADDR_SIZE = 8)(
     output reg rempty,                  // Empty flag
     output [ADDR_SIZE-1:0] raddr,       // Read address
     output reg [ADDR_SIZE :0] rptr,     // Read pointer
