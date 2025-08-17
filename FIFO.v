@@ -1,15 +1,7 @@
-//--------------DESCRIPTION-----------------
-// This is a FIFO module with a configurable data size and address size.
-// This is a top level module which wraps all the submodules together.
-//-------------------------------------------
 
-// -------------PARAMETERS------------
-// DSIZE: Size of the data bus
-// ASIZE: Size of the address bus
-// -----------------------------------
 
 module FIFO #(parameter DSIZE = 8,
-    parameter ASIZE = 4)(
+    parameter ASIZE = 8)(
     output [DSIZE-1:0] rdata,       // Output data - data to be read
     output wfull,                   // Write full signal
     output rempty,                  // Read empty signal
@@ -67,12 +59,3 @@ module FIFO #(parameter DSIZE = 8,
 
 endmodule
 
-// ---------------------------EXPLANATION---------------------------------
-// This module is a FIFO implementation with configurable data and address
-// sizes. It consists of a memory module, read and write pointer handling
-// modules, and read and write pointer synchronization modules. The read and
-// write pointers are synchronized to the respective clock domains, and the
-// read and write pointers are checked for empty and full conditions,
-// respectively. The FIFO memory module stores the data and handles the
-// read and write operations.
-// -----------------------------------------------------------------------
