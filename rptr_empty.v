@@ -1,10 +1,4 @@
-//---------------DESCRIPTION-----------------------
-// This is a FIFO read pointer Handle module with empty flag.
-//--------------------------------------------------
 
-//-------------PARAMETERS---------------------------
-// ADDR_SIZE: Size of the address bus
-//--------------------------------------------------
 
 module rptr_empty #(parameter ADDR_SIZE = 4)(
     output reg rempty,                  // Empty flag
@@ -41,12 +35,3 @@ module rptr_empty #(parameter ADDR_SIZE = 4)(
     end
 endmodule
 
-// ---------------------------EXPLANATION---------------------------------
-// The module implements a read pointer for a FIFO with an empty flag.
-// The read pointer is implemented in gray code to avoid glitches when
-// transitioning between clock domains. The read pointer is incremented based
-// on the read increment signal and the empty flag. The empty flag is set
-// when the read pointer is equal to the write pointer, indicating that
-// the FIFO is empty. The read pointer and empty flag are updated on each
-// clock cycle, and the read address is calculated from the read pointer.
-// -----------------------------------------------------------------------
