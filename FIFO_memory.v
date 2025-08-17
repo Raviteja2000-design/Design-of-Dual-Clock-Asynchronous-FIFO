@@ -1,14 +1,4 @@
-//----------------DISCRIPTION-----------------
-// This code is for FIFO memory module. It is 
-// a synchronous FIFO memory module with a
-// configurable data size and address size.
-// It is a dual-port memory module.
-//-------------------------------------------
 
-// -------------PARAMETERS------------
-// DATA_SIZE: Size of the data bus
-// ADDR_SIZE: Size of the address bus
-// -----------------------------------
 
 module FIFO_memory #(parameter DATA_SIZE = 8,
     parameter ADDR_SIZE = 4)(
@@ -28,10 +18,3 @@ module FIFO_memory #(parameter DATA_SIZE = 8,
 
 endmodule
 
-// ---------------------------EXPLANATION---------------------------------
-// The module has a memory array (mem) with a depth of 2^ADDR_SIZE.
-// The read and write addresses are used to access the memory array.
-// The write clock enable (wclk_en) and write full (wfull) signals are used
-// to control the writing process. The write data is stored in the memory
-// array on the rising edge of the write clock (wclk).
-// -----------------------------------------------------------------------
