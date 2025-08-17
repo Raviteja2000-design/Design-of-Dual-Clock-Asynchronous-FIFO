@@ -1,8 +1,3 @@
-//--------------DESCRIPTION--------------
-// This is a testbench for the FIFO module.
-// The testbench generates random data and writes it to the FIFO, 
-// then reads it back and compares the results.
-//---------------------------------------
 
 `timescale 1ns/1ps
 
@@ -81,12 +76,5 @@ module FIFO_tb();
 
 endmodule
 
-//----------------------------EXPLANATION-----------------------------------------------
-// The testbench for the FIFO module generates random data and writes it to the FIFO,
-// then reads it back and compares the results. The testbench includes three test cases:
-// 1. Write data and read it back.
-// 2. Write data to make the FIFO full and try to write more data.
-// 3. Read data from an empty FIFO and try to read more data. The testbench uses
-// clock signals for writing and reading, and includes reset signals to initialize
-// the FIFO. The testbench finishes after running the test cases.
+
 //--------------------------------------------------------------------------------------
