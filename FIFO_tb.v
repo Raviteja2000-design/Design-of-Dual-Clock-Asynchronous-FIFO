@@ -4,7 +4,7 @@
 module FIFO_tb();
 
     parameter DSIZE = 8; // Data bus size
-    parameter ASIZE = 3; // Address bus size
+    parameter ASIZE = 8; // Address bus size
     parameter DEPTH = 1 << ASIZE; // Depth of the FIFO memory
 
     reg [DSIZE-1:0] wdata;   // Input data
